@@ -1,9 +1,15 @@
-
+import React, { useState } from "react";
+import DisplayEntries from "./Components/displayEntries/displayEntries";
 
 function App() {
+  const [entries, setEntries] = useState([
+    { weight: 175, date: "11-23-2021" },
+    { weight: 176, date: "11-24-2021" },
+  ]);
+
   return (
     <div>
-      <h3>Hello World</h3>
+     <DisplayEntries parentEntries={entries} />
     </div>
   );
 }
